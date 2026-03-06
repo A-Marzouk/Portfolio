@@ -7,38 +7,95 @@
         <svg width="170px" height="170px"><use xlink:href="#dots-triangle" /></svg>
       </div>
 
-      <ul class="text-lg sm:text-xl space-y-6">
-        <li class="checkmark">
-          <div>Krokology</div>
-          <div class="text-lg text-gray-600">
-            A website made for medical university students in Ukraine to study and practice their knowledge.
-            The website comes with an administrator panel to have control over exams, questions and subjects.
-            <a href="https://krokology.com">Live link.</a>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div
+          v-for="project in projects"
+          :key="project.name"
+          class="bg-background-secondary rounded-lg p-6 border border-gray-500 border-opacity-20"
+        >
+          <div class="mb-2">
+            <span class="font-bold text-lg">{{ project.name }}</span>
+            <span
+              v-if="project.workProject"
+              class="text-xs bg-green-700 text-white px-2 py-0.5 rounded inline-block ml-2"
+            >Work Project</span>
           </div>
-        </li>
-        <li class="checkmark">
-          <div>Foster care ireland</div>
-          <div class="text-lg text-gray-600">
-            Irish-owned fostering agency website to provide support for foster carers and allow foster families to make enquiries online.
-            <a href="https://fostercareireland.ie/">Live link.</a>
+          <p class="text-base text-gray-600 mb-4">{{ project.description }}</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span
+              v-for="tag in project.tech"
+              :key="tag"
+              class="text-xs bg-green-700 bg-opacity-10 text-green-700 px-2 py-1 rounded"
+            >{{ tag }}</span>
           </div>
-        </li>
-        <li class="checkmark">
-          <div>Civ</div>
-          <div class="text-lg text-gray-600">
-            A platform build specially for developers and designers around the world to build their own resume and to have online presence with a unique
-            url for free.
-            <a href="https://civ.ie/">Live link.</a>
-          </div>
-        </li>
-        <li class="checkmark">
-          <div>Fre ie</div>
-          <div class="text-lg text-gray-600">
-            A custom tool to serve <a href="https://fostercareireland.ie/">Foster care ireland</a> for second stage of applying as a foster carer.
-            <a href="https://fre.ie/">Live link.</a>
-          </div>
-        </li>
-      </ul>
+          <a
+            v-if="project.link"
+            :href="project.link"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="text-green-700 font-bold text-sm"
+          >View Project &rarr;</a>
+        </div>
+      </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      projects: [
+        {
+          name: "ArcticAI — AI Communication Platform",
+          description:
+            "AI-powered communication platform built for Arctic Spas, featuring trained AI agents for next-generation customer interaction and support.",
+          tech: ["Next.js", "React", "OpenAI", "Node.js", "AI Agents"],
+          workProject: true,
+          link: "https://ai.myarcticspa.com",
+        },
+        {
+          name: "Arctic Spas IoT Portal",
+          description:
+            "Users/dealers portal serving 50,000+ users with real-time spa data through AWS IoT technologies, including OCR and BLE communication.",
+          tech: ["Laravel", "AWS IoT", "Flutter", "MQTT", "Python"],
+          workProject: true,
+          link: null,
+        },
+        {
+          name: "UpBeing Platform",
+          description:
+            "Health and wellness platform with core API powering mobile apps and data science pipelines, achieving 80% test coverage.",
+          tech: ["Laravel", "PHP", "Flutter", "PHPUnit"],
+          workProject: true,
+          link: null,
+        },
+        {
+          name: "Krokology",
+          description:
+            "Online learning platform for medical students in Ukraine with 240,000+ questions, interactive quizzes, and AI-powered content management.",
+          tech: ["Laravel", "Vue.js", "MySQL", "ChatGPT API"],
+          workProject: false,
+          link: "https://krokology.com",
+        },
+        {
+          name: "Civ.ie — Online Resume Builder",
+          description:
+            "Platform for developers and designers to build professional resumes with unique URLs, featuring Stripe and PayPal payment integration.",
+          tech: ["Laravel", "Vue.js", "Vuex", "Stripe", "PayPal"],
+          workProject: false,
+          link: "https://civ.ie/",
+        },
+        {
+          name: "Foster Care Ireland",
+          description:
+            "Fostering agency website providing support for foster carers with online enquiry system.",
+          tech: ["Laravel", "Vue.js", "MySQL"],
+          workProject: false,
+          link: "https://fostercareireland.ie/",
+        },
+      ],
+    };
+  },
+};
+</script>

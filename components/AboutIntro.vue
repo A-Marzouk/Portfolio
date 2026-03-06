@@ -1,11 +1,11 @@
 <template>
   <div class="container-inner mx-auto">
     <p class="text-lg sm:text-xl">
-      Greetings! I'm Ahmed. I spend my days designing and developing web applications,
-      I specialize in the <a href="https://laravel.com/">Laravel PHP framework</a> on the backend,
-      <a href="https://vuejs.org/">Vue.js</a> and <a href="https://react.dev/">React.js</a> on the frontend and other wide range of different technologies.
-      you can take a look at my <a href="https://www.linkedin.com/in/find-ahmed-marzouk/">LinkedIn account</a>
-      or send me an email at <a href="mailto:contact@ahmedmarzouk.net">contact@ahmedmarzouk.net</a>.
+      I build scalable web applications, IoT integrations, and mobile solutions.
+      I specialize in <a href="https://laravel.com/">Laravel</a>, <a href="https://vuejs.org/">Vue.js</a>,
+      React, and Flutter with deep experience in AWS cloud services and real-time systems.
+      Currently a Senior Developer at <a href="https://www.arcticspas.com/">Arctic Spas</a> and
+      M.S. CS student at <a href="https://www.gatech.edu/">Georgia Tech</a>.
     </p>
     <div class="flex justify-between items-center py-6">
       <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0">

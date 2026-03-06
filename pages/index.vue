@@ -2,6 +2,8 @@
   <div>
     <HeroSection />
     <AboutIntro />
+    <SkillsSection />
+    <ExperienceSection />
     <ProjectsSection />
     <AboutSection />
     <ContactSection />
@@ -12,7 +14,7 @@
 export default {
   head() {
     return {
-      title: 'A. Marzouk | Full-stack web developer'
+      title: 'A. Marzouk | Senior Full Stack Developer'
     }
   }
 }

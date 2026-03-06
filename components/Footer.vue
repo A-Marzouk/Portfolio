@@ -2,9 +2,17 @@
   <footer class="bg-green-700 text-white">
     <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
       <div class="mb-8 lg:mb-0">
-        <div>Copyright 2023. All rights reserved.</div>
+        <div>Copyright 2025. All rights reserved.</div>
       </div>
       <ul class="flex items-center space-x-8">
+        <li>
+          <a href="/resume.pdf" download class="text-white hover:text-white" title="Download Resume">
+            <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 16l-5-5h3V4h4v7h3l-5 5z"/>
+              <path d="M20 18H4v2h16v-2z"/>
+            </svg>
+          </a>
+        </li>
         <li>
           <a href="mailto:contact@ahmedmarzouk.net" class="text-white hover:text-white">
             <svg width="25" height="20" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -20,7 +28,7 @@
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/find-ahmed-marzouk/" target="_blank" class="text-white hover:text-gray-400">
+          <a href="https://www.linkedin.com/in/find-ahmed-mohamed/" target="_blank" class="text-white hover:text-gray-400">
             <img width="20" :src="require('~/assets/svg/linkedin.svg')" alt="LinkedIn icon" />
           </a>
         </li>

@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .theme-light {
   --bg-background-primary: #fff;
   --bg-background-secondary: #f7fafc;
