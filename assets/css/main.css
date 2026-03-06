@@ -1,0 +1,260 @@
+.theme-light {
+  --bg-background-primary: #fff;
+  --bg-background-secondary: #f7fafc;
+  --bg-background-tertiary: #e2e8f0;
+  --bg-background-form: #fff;
+  --text-copy-primary: #2d3748;
+  --text-copy-hover: #4a5568;
+  --border-border-color-primary: #fff;
+}
+
+.theme-dark {
+  --bg-background-primary: #0d2438;
+  --bg-background-secondary: #102c44;
+  --bg-background-tertiary: #1e3951;
+  --bg-background-form: #1a202c;
+  --text-copy-primary: #cbd5e0;
+  --text-copy-hover: #e2e8f0;
+  --border-border-color-primary: #1a202c;
+}
+
+.theme-dark .nuxt-content {
+  color: #cbd5e0;
+}
+
+.theme-dark nav .nuxt-link-exact-active {
+  border-color: #fff;
+  border-bottom-width: 1px;
+}
+
+.theme-light .search-highlighted,
+.theme-light .search-hover:hover {
+  background: #f0fff4;
+}
+
+.theme-dark .search-highlighted,
+.theme-dark .search-hover:hover {
+  background: #2d3748;
+}
+
+.bg-background-primary {
+  background-color: var(--bg-background-primary);
+}
+
+.bg-background-secondary {
+  background-color: var(--bg-background-secondary);
+}
+
+.text-copy-primary {
+  color: var(--text-copy-primary);
+}
+
+.text-copy-secondary {
+  color: var(--text-copy-hover);
+}
+
+.content-wrapper {
+  transition: background-color 0.25s;
+}
+
+a {
+  color: rgba(47, 133, 90, var(--text-opacity, 1));
+  font-weight: 700;
+}
+
+a:hover {
+  --text-opacity: 1;
+  color: rgba(39, 103, 73, var(--text-opacity));
+}
+
+nav .nuxt-link-exact-active {
+  font-weight: 700;
+  border-color: #000;
+  border-bottom-width: 1px;
+}
+
+.container-inner {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 640px) {
+  .container-inner {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container-inner {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container-inner {
+    max-width: 800px;
+  }
+}
+
+.checkmark {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg%20width%3D%2229%22%20height%3D%2229%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M4.427%2024.93A14.5%2014.5%200%201%201%2024.93%204.427c5.495%205.69%205.416%2014.733-.177%2020.326s-14.637%205.672-20.326.177z%22%20fill%3D%22%232E855A%22/%3E%3Cpath%20fill%3D%22%23FFF%22%20d%3D%22M10.234%2012.803l3.67%203.253L20.766%2010%2023%2012l-9.096%208L8%2014.789l2.234-2z%22/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  padding-left: 2.5rem;
+}
+
+.responsive-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 56.25%;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Prism code highlighting */
+code[class*="language-"],
+pre[class*="language-"] {
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  color: #c3cee3;
+  background: #263238;
+  font-family: Roboto Mono, monospace;
+  font-size: 1em;
+  line-height: 1.5em;
+  tab-size: 4;
+  hyphens: none;
+}
+
+pre[class*="language-"] {
+  overflow: auto;
+  position: relative;
+  margin: 0.5em 0;
+  padding: 1.25em 1em;
+  border-radius: 0.25rem;
+}
+
+.token.comment {
+  color: #546e7a;
+}
+
+.token.keyword {
+  color: #c792ea;
+  font-style: italic;
+}
+
+.token.string {
+  color: #c3e88d;
+}
+
+.token.function {
+  color: #c792ea;
+}
+
+.token.number {
+  color: #fd9170;
+}
+
+.token.operator {
+  color: #89ddff;
+}
+
+.token.punctuation {
+  color: #89ddff;
+}
+
+.token.tag {
+  color: #f07178;
+}
+
+.token.attr-name {
+  color: #ffcb6b;
+}
+
+.token.attr-value {
+  color: #c3e88d;
+}
+
+.token.boolean {
+  color: #c792ea;
+}
+
+/* Nuxt progress bar */
+.nuxt-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  opacity: 1;
+  transition: width 0.1s, opacity 0.4s;
+  background-color: #000;
+  z-index: 999999;
+}
+
+.nuxt-progress-failed {
+  background-color: red;
+}
+
+/* Nuxt content prose styles */
+.nuxt-content h1 {
+  font-size: 2em;
+  font-weight: 700;
+  margin: 1em 0 0.5em;
+}
+
+.nuxt-content h2 {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin: 1em 0 0.5em;
+}
+
+.nuxt-content h3 {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin: 1em 0 0.5em;
+}
+
+.nuxt-content p {
+  margin-bottom: 1em;
+  line-height: 1.75;
+}
+
+.nuxt-content ul {
+  list-style: disc;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.nuxt-content ol {
+  list-style: decimal;
+  padding-left: 1.5em;
+  margin-bottom: 1em;
+}
+
+.nuxt-content li {
+  margin-bottom: 0.25em;
+}
+
+.nuxt-content blockquote {
+  border-left: 4px solid #2f855a;
+  padding-left: 1em;
+  margin: 1em 0;
+  font-style: italic;
+}
+
+.nuxt-content img {
+  max-width: 100%;
+  border-radius: 0.25rem;
+}
